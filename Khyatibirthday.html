@@ -1,0 +1,400 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Happy Birthday Khyati ✨</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      font-family: "Poppins", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, #3b1d4f 0%, #171225 45%, #090812 100%);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 700px;
+      padding: 45px 25px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .small-text {
+      font-size: 14px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #d9b8ff;
+      margin-bottom: 18px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-size: clamp(45px, 12vw, 85px);
+      line-height: 1;
+      font-weight: 700;
+      background: linear-gradient(90deg, #fff, #e4baff, #ffd7ef);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s infinite alternate;
+    }
+
+    .subtitle {
+      margin-top: 20px;
+      font-size: clamp(18px, 4vw, 25px);
+      color: #f5eaff;
+      font-weight: 300;
+    }
+
+    .card {
+      margin: 35px auto 0;
+      padding: 28px 24px;
+      max-width: 580px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 24px;
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      animation: slideUp 1.3s ease;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #eee5f8;
+    }
+
+    .highlight {
+      color: #e8bfff;
+      font-weight: 600;
+    }
+
+    .button {
+      margin-top: 28px;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      color: #201226;
+      background: linear-gradient(135deg, #ffd6f6, #cfa5ff);
+      box-shadow: 0 8px 30px rgba(208, 151, 255, 0.3);
+      transition: 0.3s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 35px rgba(208, 151, 255, 0.5);
+    }
+
+    .button:active {
+      transform: scale(0.96);
+    }
+
+    #secret {
+      display: none;
+      margin-top: 25px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #ffe9f8;
+      animation: fadeIn 1s ease;
+    }
+
+    .heart {
+      display: inline-block;
+      animation: heartbeat 1.4s infinite;
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* Floating stars */
+    .star {
+      position: fixed;
+      width: 3px;
+      height: 3px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: float 5s infinite ease-in-out;
+      z-index: 0;
+    }
+
+    /* Animations */
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px rgba(230,180,255,0.2);
+      }
+      to {
+        text-shadow:
+          0 0 25px rgba(230,180,255,0.5),
+          0 0 50px rgba(230,180,255,0.2);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+
+      .container {
+        padding: 35px 15px;
+      }
+
+      .small-text {
+        font-size: 11px;
+        letter-spacing: 3px;
+      }
+
+      .card {
+        padding: 24px 18px;
+        border-radius: 20px;
+      }
+
+      .card p {
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .button {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="small-text">
+      Today is a little more special ✨
+    </div>
+
+    <h1>Happy Birthday<br>Khyati</h1>
+
+    <div class="subtitle">
+      Here's to another beautiful chapter of your life.
+    </div>
+
+    <div class="card">
+
+      <p>
+        Some people make ordinary days feel a little more special,
+        and you're genuinely one of those people.
+        <br><br>
+
+        On your birthday, I just hope you get all the happiness,
+        peace and beautiful moments you deserve.
+        May this year bring you closer to everything you've been
+        wishing for.
+        <br><br>
+
+        <span class="highlight">
+          Keep smiling, keep being you, and never forget how special you are.
+        </span>
+      </p>
+
+      <button class="button" onclick="showSurprise()">
+        ✨ One More Thing
+      </button>
+
+      <div id="secret">
+        Whatever this year brings,
+        I hope there are plenty of reasons for you to smile.
+        <br><br>
+        Have an amazing birthday, Khyati.
+        <span class="heart">♡</span>
+      </div>
+
+    </div>
+
+    <footer>
+      Made with a little thought & a lot of good wishes ✨
+    </footer>
+
+  </div>
+
+  <script>
+
+    /* -----------------------------
+       CONFETTI
+    ------------------------------ */
+
+    function createConfetti() {
+
+      const colors = [
+        "#ffb7e5",
+        "#d5a6ff",
+        "#fff0a6",
+        "#a8e6ff",
+        "#ffffff"
+      ];
+
+      for (let i = 0; i < 120; i++) {
+
+        const confetti = document.createElement("div");
+
+        confetti.style.position = "fixed";
+        confetti.style.width = Math.random() * 8 + 4 + "px";
+        confetti.style.height = Math.random() * 12 + 6 + "px";
+
+        confetti.style.background =
+          colors[Math.floor(Math.random() * colors.length)];
+
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.top = "-20px";
+
+        confetti.style.opacity = Math.random() + 0.3;
+        confetti.style.zIndex = "999";
+
+        confetti.style.transform =
+          `rotate(${Math.random() * 360}deg)`;
+
+        document.body.appendChild(confetti);
+
+        const duration = Math.random() * 2500 + 2500;
+
+        confetti.animate(
+          [
+            {
+              transform:
+                `translateY(0) rotate(0deg)`,
+              opacity: 1
+            },
+            {
+              transform:
+                `translateY(110vh) rotate(${Math.random() * 1000}deg)`,
+              opacity: 0.2
+            }
+          ],
+          {
+            duration: duration,
+            easing: "cubic-bezier(.2,.8,.3,1)"
+          }
+        );
+
+        setTimeout(() => {
+          confetti.remove();
+        }, duration);
+      }
+    }
+
+
+    /* -----------------------------
+       SURPRISE BUTTON
+    ------------------------------ */
+
+    function showSurprise() {
+
+      const secret = document.getElementById("secret");
+
+      secret.style.display = "block";
+
+      createConfetti();
+
+      // Scroll slightly on mobile
+      setTimeout(() => {
+        secret.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      }, 200);
+    }
+
+
+    /* -----------------------------
+       BACKGROUND STARS
+    ------------------------------ */
+
+    for (let i = 0; i < 45; i++) {
+
+      const star = document.createElement("div");
+
+      star.classList.add("star");
+
+      star.style.left = Math.random() * 100 + "vw";
+      star.style.top = Math.random() * 100 + "vh";
+
+      star.style.animationDelay =
+        Math.random() * 5 + "s";
+
+      star.style.opacity =
+        Math.random() * 0.7 + 0.2;
+
+      document.body.appendChild(star);
+    }
+
+
+    /* -----------------------------
+       INITIAL CONFETTI
+    ------------------------------ */
+
+    setTimeout(() => {
+      createConfetti();
+    }, 700);
+
+  </script>
+
+</body>
+</html>
+```
